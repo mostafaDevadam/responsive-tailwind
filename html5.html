@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+</head>
+
+<body>
+    <header class="h-14 ">
+
+        <nav class="h-full ">
+
+            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-16">
+                    <!-- Logo -->
+                    <div class="flex shrink-0">
+                        <a href="#" class="text-2xl font-bold text-blue-600">Meine App</a>
+                    </div>
+
+                    <div>
+                        <!-- Menu Items (Desktop) -->
+                        <div class="hidden space-x-6 md:flex lg:flex shrink-0">
+
+
+                            <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                            <a href="#" class="text-gray-700 hover:text-blue-600">Story</a>
+                            <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                            <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+                        </div>
+                    </div>
+
+
+                    <div class="hidden md:flex lg:flex shrink-0 md:justify-start">
+
+                        <!--  Notification (Desktop)-->
+                        <div class="hidden space-x-6 md:flex lg:flex items-center text-center ml-auto">
+                            <!--<a href="#" class="text-gray-700 hover:text-blue-600 mb-5 p-1">Ntf</a>-->
+                            <div class=" relative h-10 w-10 md:flex justify-end hidden " id="md-notifiy-button"
+                                onclick="document.getElementById('md-notify').classList.toggle('hidden')">
+                                <i class="fa-regular fa-bell text-2xl ml-auto relative">
+                                    <!--<div class="absolute top-0 right-1 text-xs bg-blue-600 p-1 rounded-lg h-2 w-2"></div>-->
+                                </i>
+                                <div
+                                    class="absolute h-5 w-5  -top-2 -right-3 bg-blue-200 rounded-full flex items-center">
+                                    <span class="text-xs text-white ml-1.5">3</span>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--  Notification Items (Desktop)-->
+                        <div class="relative inline-block text-left sm:hidden md:flex md:flex-row md:gap-3">
+                            <div class="absolute -right-1 top-1 z-20 hidden w-80 mt-5 origin-top-right  
+                                                bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none
+                                                md:gap-5
+                                                " id="md-notify" tabindex="-1" role="menu" aria-orientation="vertical"
+                                aria-labelledby="md-notifiy-button">
+
+                                <ul class="list-none p-2 *:mb-3 *:rounded-lg *:p2 ">
+                                    <li class="bg-blue-700 flex flex-row justify-between">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                            tabindex="-1">Message</a>
+
+                                        <button
+                                            class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                    </li>
+
+                                    <li class="bg-blue-700 flex flex-row justify-between">
+                                        <a href="#"
+                                            class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                            tabindex="-1">Message</a>
+
+                                        <button
+                                            class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                    </li>
+                                   
+
+                                </ul>
+                                <!--<div class="py-1 bg-slate-400">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Messages</a>
+                                </div>
+
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Messages</a>
+                                </div>
+
+                                <div class="py-1">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Messages</a>
+                                </div>-->
+
+
+
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile  -->
+                    <div class="relative inline-block text-left md:hidden sm:flex sm:flex-row sm:gap-3">
+                        <!-- Mobile Notification Button-->
+                        <div class="flex gap-3">
+                            <button class="relative inline-flex w-full justify-center gap-x-1.5"
+                                onclick="document.getElementById('notify').classList.toggle('hidden')"
+                                id="notify-button">
+                                <i class="fa-regular fa-bell text-2xl"></i>
+                                <div
+                                    class="absolute h-5 w-5  -top-2 -right-3 bg-blue-200 rounded-full flex items-center">
+                                    <span class="text-xs text-white ml-1.5">6</span>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Mobile Notification Items -->
+                        <div class="absolute right-12 z-10 hidden w-56 mt-5 origin-top-right 
+                         bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none" id="notify"
+                            tabindex="-1" role="menu" aria-orientation="vertical" aria-labelledby="notify-button">
+                            
+                            <ul class="list-none p-2 *:mb-3 *:rounded-lg *:p2 ">
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+
+                                <li class="bg-blue-700 flex flex-row justify-between">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 hover:text-white"
+                                        tabindex="-1">Message</a>
+
+                                    <button
+                                        class=" text-gray-100 px-1 rounded-lg me-1 h-7 mt-1 text-sm">View</button>
+                                </li>
+                               
+
+                            </ul>
+
+
+                        </div>
+
+
+                        <!-- Mobile Menu button -->
+                        <div class="flex gap-3">
+
+                            <button class=" inline-flex w-full justify-center gap-x-1.5
+                            rounded-md bg-white px-3 text-sm font-semibold text-gray-900
+                            ring-gray-300 hover:bg-gray-50 border-none
+                                                         
+                            " id="menu-button" aria-expended="true" aria-haspopup="true">
+                                <i class="fa-solid fa-bars text-2xl"></i>
+
+                            </button>
+                        </div>
+                        <!-- Mobile Menu Items -->
+                        <div class="absolute right-0 z-10 hidden w-56 mt-2 origin-top-right 
+                          bg-white rounded-md shadow-lg ring-1 ring-black/5 focus:outline-none
+                          
+                          " role="menu" aria-orientation="vertical" id="menu" aria-labelledby="menu-button"
+                            tabindex="-1">
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text-white " role="menuitem" tabindex="-1"
+                                    id="menu-item-0">Home</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text" role="menuitem" tabindex="-1"
+                                    id="menu-item-1">Story</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text" role="menuitem" tabindex="-1"
+                                    id="menu-item-2">About</a>
+                            </div>
+
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text" role="menuitem" tabindex="-1"
+                                    id="menu-item-3">Services</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text" role="menuitem" tabindex="-1"
+                                    id="menu-item-4">Support</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 hover:text" role="menuitem" tabindex="-1"
+                                    id="menu-item-5">Cloud</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 " role="menuitem" tabindex="-1" id="menu-item-6">Products</a>
+                            </div>
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 " role="menuitem" tabindex="-1" id="menu-item-7">License</a>
+                            </div>
+
+
+
+                            <div class="py-1" role="none">
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700
+                                 hover:bg-slate-400 " role="menuitem" tabindex="-1" id="menu-item-8">Account
+                                    Settings</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="flex flex-col w-full h-screen sm:h-screen  md:inline-flex md:flex-row lg:flex-row sm:flex-col">
+        <aside class="bg-orange-500 md:h-full lg:h-full  md:w-[20%] lg:w-[20%] md:block lg:block  hidden">
+            <nav class="">
+                <ul class="list-none p-2">
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            Services
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            Support
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            Cloud
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            Products
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            License
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="block px-4 py-2 text-sm text-gray-100 hover:bg-slate-400 rounded-md">
+                            Account settings
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+
+
+        </aside>
+
+        <main class=" bg-pink-400 md:w-full lg:w-[80%] sm:w-[100%] sm:h-full h-full 
+        p-2 overflow-hidden"> main
+
+            <div class="w-[100%]">
+                <!-- Section 1 -->
+                <section class="
+               
+                 sm:grid sm:grid-cols-1 
+                 md:grid md:grid-cols-2 
+                 lg:grid lg:grid-cols-3 
+                 xl:grid xl:grid-cols-4 
+                 2xl:grid 2xl:grid-cols-5 
+                 gap-4
+
+
+                ">
+
+                    <!--<div class="bg-green-500 p-5 rounded-lg">1</div>
+                    <div class="bg-green-500 p-5 rounded-lg">2</div>
+                    <div class="bg-green-500 p-5 rounded-lg">3</div>
+                    <div class="bg-green-500 p-5 rounded-lg">4</div>
+                    <div class="bg-green-500 p-5 rounded-lg">5</div>
+                    <div class="bg-green-500 p-5 rounded-lg">6</div>-->
+
+                    <!-- card 1 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+                    <!-- card 2 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+
+                    <!-- card 4 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+                    <!-- card 5 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+                    <!-- card 6 -->
+                    <div class="p-4 bg-white rounded-lg shadow-lg">
+                        <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                        <p class="mt-2 text-gray-600">This is some content for card 1</p>
+                    </div>
+
+
+                </section>
+
+
+
+                <!--<section>section</section>-->
+            </div>
+
+
+        </main>
+
+    </div>
+
+    <script>
+        // document.getElementById('menu').classList.toggle('hidden')
+        const menuBtn = document.getElementById('menu-button')
+        const menu = document.getElementById('menu')
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden')
+        })
+    </script>
+
+</body>
+
+</html>

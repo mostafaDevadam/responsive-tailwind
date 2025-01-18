@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dist.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-gray-100">
+
+    <header class="p-4 text-center
+     text-white bg-blue-600">
+        <h1 class="text-2xl font-bold">Responsive Layout with TailwindCSS</h1>
+    </header>
+
+    <nav class="bg-white border-b border-gray-200">
+        <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 ">
+                    <a href="#" class="text-2xl font-bold text-blue-600">MyApp</a>
+                </div>
+                <!-- Menu Items (Desktop) -->
+                <div class="hidden space-x-6 md:flex lg:flex">
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Services</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600">Contact</a>
+
+                </div>
+
+                <!-- Mobile Menu button -->
+                <!--<div class="relative flex items-center md:hidden sm:justify-end text-end">
+                    <button id="mobile-menu-button" class="text-gray-700 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 2-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+
+                    <div id="mobile-menu"
+                        class="absolute right-0 flex-col hidden border-t border-gray-200 md:hidden bg-gray-50 top-6">
+                        <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600 ">Home</a>
+                        <a href="" class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">About</a>
+                        <a href=""
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">Services</a>
+                        <a href=""
+                            class="block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-blue-600">Contact</a>
+
+                    </div>
+
+                </div>-->
+
+                <div class="relative inline-block text-left md:hidden">
+                    <div>
+                        <button type="button" class="inline-flex w-full justify-center gap-x-1.5 rounded-md
+                       bg-white px-3 py-2 text-sm font-semibold text-gray-900 
+                        ring-gray-300 hover:bg-gray-50 border-none" 
+                       id="menu-button" aria-expanded="true"
+                            aria-haspopup="true">
+                            
+                            <i class="fa-solid fa-bars text-2xl"></i>
+                            <!--<svg class="-mr-1 text-gray-400 border-none size-5" viewBox="0 0 20 20" fill="currentColor"
+                                aria-hidden="true" data-slot="icon">
+                                <path fill-rule="evenodd"
+                                    d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                    clip-rule="evenodd" />
+                            </svg>-->
+                           
+                        </button>
+                    </div>
+
+                    <div class="absolute right-0 z-10 hidden w-56 mt-2 origin-top-right
+                     bg-white rounded-md shadow-lg ring-1
+                      ring-black/5 focus:outline-none"
+                        role="menu" aria-orientation="vertical" 
+                        id="menu"
+                         aria-labelledby="menu-button" tabindex="-1">
+                        <div class="py-1" role="none">
+                            <!-- Active: "bg-gray-100 text-gray-900 outline-none", Not Active: "text-gray-700" -->
+                            <a href="#" class="block px-4 py-2 text-sm
+                             text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-0">Account settings</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-1">Support</a>
+                            <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-2">License</a>
+                            <form method="POST" action="#" role="none">
+                                <button type="submit"
+                                    class="block w-full px-4 py-2 text-sm text-left text-gray-700 hover:bg-slate-400"
+                                    role="menuitem" tabindex="-1" id="menu-item-3">Sign out</button>
+                            </form>
+                            <!-- -->
+                             <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-0">Home</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-0">About</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-0">Services</a>
+                                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-400" role="menuitem"
+                                tabindex="-1" id="menu-item-0">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--  -->
+
+            </div>
+        </div>
+    </nav>
+
+    <script>
+
+
+        /*const mobileMenuBtn = document.getElementById('mobile-menu-button')
+        const mobileMenu = document.getElementById('mobile-menu')
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden')
+        })*/
+
+        const menuBtn = document.getElementById('menu-button')
+        const menu = document.getElementById('menu')
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.toggle('hidden')
+        })
+    </script>
+
+    <main class="p-6 mx-auto mx-w-7xl">
+        <section class="grid grid-cols-1 gap-6 md:grid-cols-2 
+        lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+            <!-- card 1 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+            <!-- card 2 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+            <!-- card 3 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+
+            <!-- card 4 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+            <!-- card 5 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+            <!-- card 6 -->
+            <div class="p-4 bg-white rounded-lg shadow-lg">
+                <h2 class="text-xl font-bold text-gray-800">Card 1</h2>
+                <p class="mt-2 text-gray-600">This is some content for card 1</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="p-4 text-center text-white bg-gray-800">
+        <p>&copy; 2025 My Responsive Layout. all rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
